@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rate the Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="masthead">
+    <h1>Rate the book</h1>
+    <p>Pick a genre, then score each measure. The recommendation line is set at <strong>3.50+/5</strong>. Scores update live, and the URL updates so you can bookmark or share the result.</p>
+  </header>
+
+  <div class="meta-container">
+    <div class="cover-preview" id="coverContainer">
+      <img id="coverImg" alt="Book Cover">
+    </div>
+    <div class="meta-inputs">
+      <div class="field">
+        <label for="bookTitle">Book Title</label>
+        <input type="text" id="bookTitle" placeholder="e.g. Passenger 23">
+      </div>
+      <div class="field">
+        <label for="bookAuthor">Author</label>
+        <input type="text" id="bookAuthor" placeholder="e.g. Sebastian Fitzek">
+      </div>
+    </div>
+  </div>
+
+  <div class="genre-label">Genre</div>
+  <div class="genres" id="genres" role="group" aria-label="Book genre"></div>
+
+  <div class="layout">
+    <section class="criteria" id="criteria" aria-label="Rating criteria"></section>
+
+    <aside class="result">
+      <div class="due-card">
+        <div class="due-head">Final rating</div>
+        
+        <div class="due-top-grid">
+          <div class="stars"><span class="back">★★★★★</span><span class="front" id="starsFront">★★★★★</span></div>
+          <div class="score" id="scoreNum">0.00<span>/5</span></div>
+          <div class="verdict" id="verdict"></div>
+          <div class="badge" id="recBadge"></div>
+        </div>
+
+        <div class="vector-label">Rating Scale Precision</div>
+        <div class="precision-options" id="precisionOptions">
+          <button type="button" class="precision-btn active" data-scale="0.25">0.25 Scale</button>
+          <button type="button" class="precision-btn" data-scale="0.5">0.5 Scale</button>
+          <button type="button" class="precision-btn" data-scale="1.0">Whole (1.0)</button>
+        </div>
+
+        <div class="vector-label">Vector</div>
+        <div class="vector-row">
+          <code id="vectorStr"></code>
+          <button class="chip" id="copyVector" type="button">Copy</button>
+        </div>
+
+        <button class="link-btn" id="copyLink" type="button">Copy shareable link</button>
+        <button class="reset" id="resetBtn" type="button">Reset to defaults</button>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    Released under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> license. View <a href="../LICENSE.md">LICENSE.md</a>.
+  </footer>
+
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
