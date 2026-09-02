@@ -500,3 +500,63 @@ footer.site-footer a:hover {
 @media (prefers-reduced-motion:reduce){
   .stars .front, .badge{ transition:none; }
 }
+
+/* Footer link on main page */
+.app-footer {
+  text-align: center;
+  padding: 24px 0;
+  margin-top: 40px;
+}
+
+.legal-link {
+  color: var(--text-muted, #94a3b8);
+  font-size: 0.85rem;
+  text-decoration: underline;
+}
+
+.legal-link:hover {
+  color: #fff;
+}
+
+/* Standalone Legal Page Layout */
+.legal-page {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.legal-container {
+  max-width: 680px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.back-link {
+  display: inline-block;
+  color: #c084fc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.legal-container h1 {
+  font-size: 1.75rem;
+  margin-bottom: 24px;
+}
+
+.legal-container h2 {
+  font-size: 1.1rem;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #e2e8f0;
+}
+
+.legal-container p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 12px;
+}
