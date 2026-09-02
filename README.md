@@ -1,1 +1,1 @@
-# book-rate
+An interactive web app designed to help readers evaluate and review books using genre-tailored criteria. Whether you are scoring a fantasy novel on world-building or a mystery on suspense, the tool calculates a weighted final score across your choice of scale precision (0.25, 0.5, or whole numbers). It automatically fetches cover art via open APIs, generates shareable URL vectors so you can bookmark or send your exact breakdown to friends, and runs entirely as a fast, zero-dependency static site.
