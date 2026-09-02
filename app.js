@@ -3,6 +3,13 @@ import { GENRES, GENRE_ORDER } from './genres/index.js';
 (function(){
   "use strict";
 
+  function formatRating(value, step) {
+    const numericStep = Number(step);
+    if (numericStep === 0.25) return Number(value).toFixed(2);
+    if (numericStep === 0.5) return Number(value).toFixed(1);
+    return Math.round(value).toString();
+  }
+
   function scaleValues(){
     const vals = [];
     for(let v = 0; v <= 5; v += 1) vals.push(v);
@@ -409,7 +416,7 @@ import { GENRES, GENRE_ORDER } from './genres/index.js';
     const { final } = compute();
 
     starsFront.style.width = ((final / 5) * 100) + '%';
-    scoreNum.innerHTML = (selectedScalePrecision === 1.0 ? final.toFixed(1) : final.toFixed(2)) + '<span>/5</span>';
+    scoreNum.innerHTML = formatRating(final, selectedScalePrecision) + '<span>/5</span>';
 
     const v = verdictFor(final);
     verdictEl.textContent = v.text;
